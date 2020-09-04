@@ -108,7 +108,7 @@ char *my_read(){
     //if not able to allocate memory
 	if(!line){
         //fprintf helps to store the error in the file here stderr
-		fprintf(stderr,"my_shell:allocation error\n");
+		fprintf(stderr,"error\n");
 		exit(1);
 	}
 	while(1){
@@ -128,7 +128,7 @@ char *my_read(){
 			buffer=buffer+1024; 
 			line=realloc(line,buffer);
 			if(!line){
-				fprintf(stderr,"my_shell:allocation error\n");
+				fprintf(stderr,"error\n");
 				exit(1);
 			}
 		}
